@@ -11,6 +11,9 @@
 .bgYellow{background-color: yellow;}
 .bgLightC{background-color: lightcoral;}
 .bgBlack{background-color: black;}
+.bgGray{background-color: #282828;}
+.bgLightGray{background-color: #808080;}
+.bgSpaceGray{background-color: #141922;}
 .bgCadet{background-color: cadetblue;}
 .bgCfB{background-color: cornflowerblue;}
 .borderB    {border: 1px solid black;}
@@ -18,11 +21,21 @@
 .borderW    {border: 1px solid white;}
 .borderR    {border: 1px solid red;}
 .radius     {border-radius: 5px;}
+.circle{border-radius: 50%;}
 
+/****************** IMAGES *******************/
+.img18{width: 18px;}
+.img16{
+    width: 24px;
+    height: 19px;
+    object-fit: contain;
+}
+
+.mb05em{margin-bottom: 0.5em;}
 /****************** FLEX *******************/
 
 .flex           {display: flex;}
-.flexColumn     {display: flex; flex-direction: column;}
+.flexCol        {display: flex; flex-direction: column;}
 .spaceBtw       {justify-content: space-between;}
 .spaceAround    {justify-content: space-around;}
 .justifyEnd     {justify-content: flex-end;}
@@ -30,6 +43,7 @@
 .alignCenter    {align-items: center;}
 .alignStart     {align-items: flex-start;}
 .alignEnd       {align-items: flex-end;}
+.selfEnd        {align-self: flex-end;}
 
 /****************** COLUMNS *******************/
 .col-90-xs{width: 90%;}
@@ -43,7 +57,6 @@
 .col-1-8-xs{width: calc(100% / 8 );}
 .col-1-9-xs{width: calc(100% / 9 );}
 .col-1-10-xs{width: calc(100% / 10 );}
-
 .h100{min-height: 100%;}
 /*********** HELPER END ************/
 
@@ -57,31 +70,32 @@ header{
     min-height: 60px;
     position: fixed;
     min-width: 100%;
-    background-color: rgba(0, 0, 0, 0.571);
+    background-color: rgb(0 0 0 / 29%);;
     z-index: 999;
 }
 
 
 /*********** MAIN ************/
-.topContainer{
-    height: calc(100vh - 60px);
-}
+.topContainer{height: calc(100vh - 60px);}
 
 .mainContainer{
-    height: calc(100vh - 120px);
+    height: calc(100vh - 60px);
     display: inline-block;
-    margin-top: 60px;
 }
+
+.lateralMenu{padding-top: 0.5em;}
+
 /*********** FOOTER************/
 .footerBar{
     min-height: 60px;
 }
 
 /****************** MEDIA QUERY *******************/
+
 /* SMALL */
 @media screen  and (min-width:480px) {
     
-    .pageContainer > .asideContainer{
+    .topContainer > .lateralMenu{
         width: 210px;
     }
 }
