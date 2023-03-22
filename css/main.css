@@ -6,13 +6,15 @@
     padding: 0;
 }
 
-body{
-    position: relative;
-}
 
 /*********** BORDER PROPERTIES ************/
-
+.bgYellow{background-color: yellow;}
+.bgLightC{background-color: lightcoral;}
+.bgBlack{background-color: black;}
+.bgCadet{background-color: cadetblue;}
+.bgCfB{background-color: cornflowerblue;}
 .borderB    {border: 1px solid black;}
+.borderLightC    {border: 1px solid lightcoral}
 .borderW    {border: 1px solid white;}
 .borderR    {border: 1px solid red;}
 .radius     {border-radius: 5px;}
@@ -30,32 +32,58 @@ body{
 .alignEnd       {align-items: flex-end;}
 
 /****************** COLUMNS *******************/
+.col-90-xs{width: 90%;}
 .col-100-xs{width: 100%;}
 .col-1-2-xs{width: calc(100% / 2);}
 .col-1-3-xs{width: calc(100% / 3);}
 .col-1-4-xs{width: calc(100% / 4);}
 .col-1-5-xs{width: calc(100% / 5);}
 .col-1-6-xs{width: calc(100% / 6 );}
+.col-1-7-xs{width: calc(100% / 7 );}
+.col-1-8-xs{width: calc(100% / 8 );}
+.col-1-9-xs{width: calc(100% / 9 );}
+.col-1-10-xs{width: calc(100% / 10 );}
 
-.h100{height: 100%;}
+.h100{min-height: 100%;}
 /*********** HELPER END ************/
 
-/*********** MAIN ************/
-footer{
-    height: 60px;
-    position: fixed;
-    bottom: 0;
-    min-width: 100%;
-    background-color: #282828;
+.pageContainer{
+    width: 100vw;
+    height:100vh;
+}
 
+/*********** HEADER ************/
+header{
+    min-height: 60px;
+    position: fixed;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.571);
+    z-index: 999;
 }
 
 
+/*********** MAIN ************/
+.topContainer{
+    height: calc(100vh - 60px);
+}
+
+.mainContainer{
+    height: calc(100vh - 120px);
+    display: inline-block;
+    margin-top: 60px;
+}
+/*********** FOOTER************/
+.footerBar{
+    min-height: 60px;
+}
 
 /****************** MEDIA QUERY *******************/
 /* SMALL */
-@media  and (min-width:480px) {
+@media screen  and (min-width:480px) {
     
+    .pageContainer > .asideContainer{
+        width: 210px;
+    }
 }
 
 /* MEDIUM */
