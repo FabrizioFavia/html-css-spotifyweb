@@ -9,7 +9,11 @@
 
 /* FONT SIZE */
 .fs10{font-size: 10px;}
+.fs12{font-size: 12px;}
 .fs14{font-size: 14px;}
+.fs16{font-size: 16px;}
+.fs18{font-size: 18px;}
+.fs30{font-size: 30px;}
 /***********COLORS AND BORDER PROPERTIES ************/
 .white{color: white;}
 .lGray{color: rgb(125, 122, 122);}
@@ -17,6 +21,7 @@
 .bgLightC{background-color: lightcoral;}
 .bgBlack{background-color: black;}
 .bgGray{background-color: #282828;}
+.bgWhite{background-color: #ffffff;}
 .bgLightGray{background-color: #808080;}
 .bgSpaceGray{background-color: #141922;}
 .bgCadet{background-color: cadetblue;}
@@ -29,10 +34,15 @@
 .circle{border-radius: 50%;}
 
 .mb05em{margin-bottom: 0.5em;}
+.mt02em{margin-top: 0.2em;}
+.mt05em{margin-top: 0.5em;}
+.mt08em{margin-top: 0.8em;}
 .pL05em{padding-left: 0.5em;}
+
 /****************** IMAGES *******************/
 .img18{width: 18px;}
 .img28{width: 28px;}
+
 .img16{
     width: 24px;
     height: 19px;
@@ -40,11 +50,11 @@
 }
 
 /****************** FLEX *******************/
-
 .flex           {display: flex;}
 .flexCol        {display: flex; flex-direction: column;}
 .spaceBtw       {justify-content: space-between;}
 .spaceAround    {justify-content: space-around;}
+.spaceEven      {justify-content:space-evenly;}
 .justifyEnd     {justify-content: flex-end;}
 .justifyCenter  {justify-content: center;}
 .alignCenter    {align-items: center;}
@@ -52,7 +62,9 @@
 .alignEnd       {align-items: flex-end;}
 .selfEnd        {align-self: flex-end;}
 
+
 /****************** COLUMNS *******************/
+.col-80-xs{width: 80%;}
 .col-90-xs{width: 90%;}
 .col-100-xs{width: 100%;}
 .col-1-2-xs{width: calc(100% / 2);}
@@ -96,6 +108,31 @@ header{
 .footerBar{
     min-height: 60px;
 }
+
+.playerButtons{
+    width: 100%;
+}
+
+.emptyMusicBar{
+    width: 60%;
+    height: 5px;
+}
+
+.fullMusicBar{
+    width: 30px;
+    height: 100%;
+}
+
+.emptyVolumeBar{
+    width: 45%;
+    height: 5px;
+}
+
+.fullVolumeBar{
+    width: 30px;
+    height: 100%;
+}
+
 
 /****************** MEDIA QUERY *******************/
 
