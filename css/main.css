@@ -7,9 +7,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-ul{
-    list-style: none;
-}
 
 /* FONT SIZE */
 .fs10{font-size: 10px;}
@@ -51,6 +48,7 @@ ul{
 .mt08em{margin-top: 0.8em;}
 .mt1em{margin-top: 1em;}
 .pT05em{padding-top: 0.2em;}
+.paddingR10{padding-right: 10px;}
 
 /****************** IMAGES *******************/
 .img16{
@@ -120,6 +118,23 @@ header{
     overflow-y: scroll;
 }
 
+ul li{
+    list-style: none;
+    width: 50%;
+    padding: 0.5em;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(125, 122, 122);
+    padding-bottom: 0.5em;
+}
+
+ul li:hover a{
+    border-bottom: 1px solid #adff2f ;
+    color: white;
+}
+
 #recentlyPlayed{
     margin: 2em 0 1em 0.5em;
 }
@@ -133,8 +148,6 @@ header{
     margin: 0.4em 0 3em 0;
     text-align: center;
 }
-
-
 
 .row{
     display: flex;
@@ -196,10 +209,17 @@ footer{
     width: 100%;
 }
 
+.playerButtons i{
+    margin-left:  2%;
+    margin-right: 2%;
+}
+
 .emptyMusicBar{
-    width: 60%;
+    min-width: 60%;
     height: 4px;
     background-color:#808080;
+    margin-left:  25px;
+    margin-right: 25px;
 }
 
 .fullMusicBar{
@@ -212,14 +232,20 @@ footer{
     background-color: #adff2f;
 }
 
+.volume i{
+    margin-left:  5%;
+    margin-right: 5%;
+}
+
+
 .emptyVolumeBar{
-    width: 45%;
+    width: 100px;
     height: 4px;
     background-color:#808080;
 }
 
 .fullVolumeBar{
-    width: 70%;
+    width: 20px;
     height: 100%;
     background-color: #c1c1c1;
 }
@@ -288,18 +314,19 @@ footer{
         align-items: flex-start;
     }
 
-    .listenedTrack{
-        max-width: 500px;
+
+    ul li{
+        list-style: none;
+        width: calc(100% / 2);
+        padding: 0.5em;
     }
+
+    ul{
+        justify-content: space-evenly;
+    }
+
 }
 
-.footerAlbumName{
-    max-width:calc(100%/2);
-}
-
-.footerCover{
-    max-width: 235px;
-}
 
 /* MEDIUM */
 @media screen  and (min-width:769px) {
@@ -307,6 +334,16 @@ footer{
     .wrapper{
         width: calc(100% / 4);
         padding: 0.5em;
+    }
+
+    ul li{
+        list-style: none;
+        width: calc(100% / 4);
+        padding: 0.5em;
+    }
+
+    ul{
+        justify-content: space-evenly;
     }
     
 }
@@ -316,6 +353,19 @@ footer{
     .wrapper{
         width: calc(100% / 6);
         padding: 0.5em;
+    }
+
+    ul li{
+        list-style: none;
+        width: calc(100% / 7);
+        padding: 0.5em 0.5em;
+    }
+    ul{
+        justify-content: center;
+    }
+
+    #customNavTop{
+        margin-left: 100px;
     }
 }
 /* EXTRA-LARGE */
