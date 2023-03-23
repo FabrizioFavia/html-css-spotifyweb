@@ -42,7 +42,10 @@ ul{
 .circle{border-radius: 50%;}
 
 .marginL15{margin-left: 15px;}
+.mb02em{margin-bottom: 0.2em;}
 .mb05em{margin-bottom: 0.5em;}
+.mb1em{margin-bottom: 1em;}
+.mb2em{margin-bottom: 2em;}
 .mt02em{margin-top: 0.2em;}
 .mt05em{margin-top: 0.5em;}
 .mt08em{margin-top: 0.8em;}
@@ -117,12 +120,17 @@ header{
     overflow-y: scroll;
 }
 
-h2{
-    margin: 2em 0 1em 0;
+#recentlyPlayed{
+    margin: 2em 0 1em 0.5em;
 }
 
-.wrapper h5, .wrapper p{
-    margin: 0.4em 0;
+.wrapper h5 {
+    margin: 1em 0;
+    text-align: center;
+}
+
+.wrapper p{
+    margin: 0.4em 0 3em 0;
     text-align: center;
 }
 
@@ -131,7 +139,6 @@ h2{
 .row{
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .wrapper{
@@ -144,7 +151,9 @@ h2{
     width: 100%;
 }
 
-
+.wrapper:hover img{
+    filter: contrast(1);
+}
 
 
 /*********** SIDE MENU ************/
