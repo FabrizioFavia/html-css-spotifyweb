@@ -18,7 +18,7 @@
 
 .lh20{line-height: 20px;}
 
-/***********COLORS AND BORDER PROPERTIES ************/
+/***********COLORS AND POSITION PROPERTIES ************/
 .white{color: white;}
 .lGray{color: rgb(125, 122, 122);}
 .bgYellow{background-color: yellow;}
@@ -28,13 +28,12 @@
 .bgWhite{background-color: #ffffff;}
 .bgLightGray{background-color: #808080;}
 .bgSpaceGray{background-color: #141922;}
-.bgCadet{background-color: cadetblue;}
-.bgCfB{background-color: cornflowerblue;}
 .borderB    {border: 1px solid black;}
-.borderLightC    {border: 1px solid lightcoral}
 .borderW    {border: 1px solid white;}
 .borderR    {border: 1px solid red;}
 
+
+/*********** POSITION AND SPACES PROPERTIES ************/
 .radius     {border-radius: 5px;}
 .circle{border-radius: 50%;}
 
@@ -44,11 +43,15 @@
 .mb1em{margin-bottom: 1em;}
 .mb2em{margin-bottom: 2em;}
 .mt02em{margin-top: 0.2em;}
+.mt04em{margin-top: 0.4em;}
 .mt05em{margin-top: 0.5em;}
 .mt08em{margin-top: 0.8em;}
 .mt1em{margin-top: 1em;}
 .pT05em{padding-top: 0.2em;}
 .paddingR10{padding-right: 10px;}
+
+.relative{position: relative;}
+.absolute{position: absolute;}
 
 /****************** IMAGES *******************/
 .img16{
@@ -100,11 +103,26 @@
 /*********** HEADER ************/
 header{
     min-height: 60px;
-    position: fixed;
     min-width: 100%;
     background-color: #080b12;
-    z-index: 999;
+    z-index: 998;
+    position: relative;
 }
+
+.headerBtn{
+    padding:1em;
+    border-radius: 25px;
+    text-align: center;
+    position: absolute;
+    right: 30px;
+    bottom: 20%;
+}
+
+.headerBtn:hover{
+    transform: scale(1.1);
+}
+
+
 
 
 /*********** MAIN ************/
@@ -114,7 +132,6 @@ header{
     height: calc(100vh - 120px);
     display: inline-block;
     padding: 30px 10px 0 10px;
-    margin-top: 60px;
     overflow-y: scroll;
 }
 
@@ -166,6 +183,10 @@ ul li:hover a{
 
 .wrapper:hover img{
     filter: contrast(1);
+}
+
+.squareCover{
+    height: 90%;
 }
 
 
@@ -237,7 +258,6 @@ footer{
     margin-right: 5%;
 }
 
-
 .emptyVolumeBar{
     width: 100px;
     height: 4px;
@@ -253,7 +273,6 @@ footer{
 .fullVolumeBar:hover{
     background-color: #adff2f;
 }
-
 
 /****************** MEDIA QUERY *******************/
 /* SHORT SCREEN*/
@@ -302,18 +321,14 @@ footer{
     }
 
     /* MAIN */
-
-
     .wrapper{
         width: calc(100% / 2);
         padding: 0.5em;
     }
 
-
     .topImg, .bottomImg{
         align-items: flex-start;
     }
-
 
     ul li{
         list-style: none;
@@ -325,6 +340,9 @@ footer{
         justify-content: space-evenly;
     }
 
+    .footerCover img.img28{
+        width: 40px;
+    }
 }
 
 
@@ -345,8 +363,8 @@ footer{
     ul{
         justify-content: space-evenly;
     }
-    
 }
+
 /* LARGE */
 @media screen  and (min-width:992px) {
     
@@ -360,6 +378,7 @@ footer{
         width: calc(100% / 7);
         padding: 0.5em 0.5em;
     }
+
     ul{
         justify-content: center;
     }
@@ -368,6 +387,7 @@ footer{
         margin-left: 100px;
     }
 }
+
 /* EXTRA-LARGE */
 @media screen  and (min-width:1200px) {
 
