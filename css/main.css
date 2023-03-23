@@ -14,6 +14,9 @@
 .fs16{font-size: 16px;}
 .fs18{font-size: 18px;}
 .fs30{font-size: 30px;}
+
+.lh20{line-height: 20px;}
+
 /***********COLORS AND BORDER PROPERTIES ************/
 .white{color: white;}
 .lGray{color: rgb(125, 122, 122);}
@@ -30,28 +33,33 @@
 .borderLightC    {border: 1px solid lightcoral}
 .borderW    {border: 1px solid white;}
 .borderR    {border: 1px solid red;}
+
 .radius     {border-radius: 5px;}
 .circle{border-radius: 50%;}
 
+.marginL15{margin-left: 15px;}
 .mb05em{margin-bottom: 0.5em;}
 .mt02em{margin-top: 0.2em;}
 .mt05em{margin-top: 0.5em;}
 .mt08em{margin-top: 0.8em;}
-.pL05em{padding-left: 0.5em;}
+.mt1em{margin-top: 1em;}
+.pT05em{padding-top: 0.2em;}
 
 /****************** IMAGES *******************/
-.img18{width: 18px;}
-.img28{width: 28px;}
-
 .img16{
     width: 24px;
     height: 19px;
     object-fit: contain;
 }
+.img15{width: 15px;}
+.img18{width: 18px;}
+.img28{width: 28px;}
+.img100{width: 100px;}
 
 /****************** FLEX *******************/
 .flex           {display: flex;}
 .flexCol        {display: flex; flex-direction: column;}
+.wrap           {flex-wrap: wrap;}
 .spaceBtw       {justify-content: space-between;}
 .spaceAround    {justify-content: space-around;}
 .spaceEven      {justify-content:space-evenly;}
@@ -98,15 +106,54 @@ header{
 .topContainer{height: calc(100vh - 60px);}
 
 .mainContainer{
-    height: calc(100vh - 60px);
+    height: calc(100vh - 120px);
     display: inline-block;
+    padding: 60px 10px 0 10px;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.square{
+    width: 180px;
+    height: 180px;
+    margin-left: 10px;
+}
+/*********** SIDE MENU ************/
+.bigLogo{
+    display: none;
 }
 
 .lateralMenu{padding-top: 0.5em;}
 
+span.homeDscrpt, span.searchDscrpt, span.libraryDscrpt, .playlistText, .addDscrpt, .fa-square-plus, .playlistName{
+    display: none;
+}
+
+.sideElement:hover{
+    border-left: 2px solid #adff2f;
+}
+
+.line{
+    width: 150px;
+    height: 0.5px;
+    border: 0.5px solid rgb(86 84 84);
+    display: none;
+}
+
+.sideElement:hover > span{
+    color: white;
+}
+
 /*********** FOOTER************/
+footer{
+    z-index: 2;
+}
+
 .footerBar{
     min-height: 60px;
+
 }
 
 .playerButtons{
@@ -115,38 +162,99 @@ header{
 
 .emptyMusicBar{
     width: 60%;
-    height: 5px;
+    height: 4px;
+    background-color:#808080;
 }
 
 .fullMusicBar{
-    width: 30px;
+    width: 33%;
     height: 100%;
+    background-color: #c1c1c1;
+}
+
+.fullMusicBar:hover{
+    background-color: #adff2f;
 }
 
 .emptyVolumeBar{
     width: 45%;
-    height: 5px;
+    height: 4px;
+    background-color:#808080;
 }
 
 .fullVolumeBar{
-    width: 30px;
+    width: 70%;
     height: 100%;
+    background-color: #c1c1c1;
+}
+
+.fullVolumeBar:hover{
+    background-color: #adff2f;
 }
 
 
 /****************** MEDIA QUERY *******************/
+/* SHORT SCREEN*/
+@media screen and (max-height:552px) {
+ 
+    .topContainer > .lateralMenu{
+        overflow-y: scroll;
+    }
+}
+
 
 /* SMALL */
 @media screen  and (min-width:480px) {
+
+    .mb15em-s{margin-bottom: 1.5em;}
+    .pL05em{padding-left: 1.5em;}
+    .dsplBlock{display: block;}
     
+    /* SIDE MENU */
     .topContainer > .lateralMenu{
-        width: 210px;
-        padding-left: 10px;
+        width: 220px;
+        padding-left: 15px;
+        z-index: 1;
     }
+
+    img.bigLogo{
+        display: block;
+    }
+
+    img.smallLogo{
+        display: none;
+    }
+
+    div.sideElement span{
+        display: block;
+        transition: 0.3s;
+    }
+
+    .line{
+        display: block;
+        width: 90%;
+    }
+
+    div.sideElement{
+        padding-left: 15px;
+    }
+
 
     .topImg, .bottomImg{
         align-items: flex-start;
     }
+
+    .listenedTrack{
+        max-width: 500px;
+    }
+}
+
+.footerAlbumName{
+    max-width:calc(100%/2);
+}
+
+.footerCover{
+    max-width: 235px;
 }
 
 /* MEDIUM */
