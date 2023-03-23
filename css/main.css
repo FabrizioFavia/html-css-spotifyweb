@@ -7,6 +7,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+ul{
+    list-style: none;
+}
+
 /* FONT SIZE */
 .fs10{font-size: 10px;}
 .fs12{font-size: 12px;}
@@ -108,24 +112,41 @@ header{
 .mainContainer{
     height: calc(100vh - 120px);
     display: inline-block;
-    padding: 60px 10px 0 10px;
+    padding: 30px 10px 0 10px;
     margin-top: 60px;
-    display: flex;
-    flex-wrap: wrap;
     overflow-y: scroll;
 }
 
-.square{
-    width: 180px;
-    height: 180px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+h2{
+    margin: 2em 0 1em 0;
+}
+
+.wrapper h5, .wrapper p{
+    margin: 0.4em 0;
+    text-align: center;
+}
+
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.wrapper{
+    width: calc(100% / 2);
+    padding: 0.5em;
 }
 
 .square > img{
     object-fit: contain;
     width: 100%;
 }
+
+
+
+
 /*********** SIDE MENU ************/
 .bigLogo{
     display: none;
@@ -218,7 +239,7 @@ footer{
     
     /* SIDE MENU */
     .topContainer > .lateralMenu{
-        width: 220px;
+        min-width: 220px;
         padding-left: 15px;
         z-index: 1;
     }
@@ -247,11 +268,10 @@ footer{
 
     /* MAIN */
 
-    .square{
-        width: 140px;
-        height: 140px;
-        margin-left: 8px;
-        margin-bottom: 8px;
+
+    .wrapper{
+        width: calc(100% / 2);
+        padding: 0.5em;
     }
 
 
@@ -275,19 +295,25 @@ footer{
 /* MEDIUM */
 @media screen  and (min-width:769px) {
 
-    .square{
-        width: 180px;
-        height: 180px;
-        margin-left: 8px;
-        margin-bottom: 8px;
+    .wrapper{
+        width: calc(100% / 4);
+        padding: 0.5em;
     }
     
 }
 /* LARGE */
-@media  and (min-width:992px) {
+@media screen  and (min-width:992px) {
     
+    .wrapper{
+        width: calc(100% / 6);
+        padding: 0.5em;
+    }
 }
 /* EXTRA-LARGE */
-@media  and (min-width:1200px) {
-    
+@media screen  and (min-width:1200px) {
+
+    .wrapper{
+        width: calc(100% / 6);
+        padding: 0.5em;
+    }
 }
