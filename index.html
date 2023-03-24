@@ -21,13 +21,13 @@
                     <div class="topImg flexCol alignCenter">
 
                         <!-- LOGO -->
-                        <img class="bigLogo marginL15 mb15em-s img100" src="./img/logo.svg" alt="spotify logo">
+                        <img class="bigLogo mt05em marginL15 mb15em-s img100" src="./img/logo.svg" alt="spotify logo">
                         <img class="smallLogo img18 mb05em" src="./img/logo-small.svg" alt="logo spotify">
 
                         <!-- HOME -->
-                        <div class="sideElement flex">
+                        <div id="home" class="sideElement flex">
                             <img class="img18 mb05em" src="./img/home.svg" alt="home">
-                            <span class="homeDscrpt fs12 lGray pL05em lh20">Home</span>
+                            <span class="homeDscrpt fs12 white pL05em lh20">Home</span>
                         </div>
 
                         <!-- SEARCH -->
@@ -53,7 +53,6 @@
                                 style="color: #c5c4c4;"></i>
                             <span class="addDscrpt fs12 lGray pL05em mt1em lh20 ">Crea Playlist</span>
                         </div>
-                        
                         <div class="scrollableSection col-100-xs">
                             <div class="playlist">
                                 <!-- NEW PLAYLIST -->
@@ -128,7 +127,7 @@
                     <div class="mainContainer bgSpaceGray">
 
                         <ul class="flex wrap">
-                            <li id="customNavTop" class="white fs14"><a href="#">IN EVIDENZA</a></li>
+                            <li id="customNavTop" class="white fs14"><a class="white" href="#">IN EVIDENZA</a></li>
                             <li class="white fs14"><a href="#">PODCAST</a></li>
                             <li class="white fs14"><a href="#">CLASSIFICHE</a></li>
                             <li class="white fs14"><a href="#">GENERI E MOOD</a></li>
@@ -144,7 +143,7 @@
                             <div class="wrapper">
                                 <div class="square relative">
                                     <div class="squareCover col-100-xs absolute">
-                                        <i class="fa-regular fa-heart fs30" style="color: #fffdfd;"></i>
+                                        <i class="fa-regular fa-heart fs30"></i>
                                     </div>
                                     <img src="./img/metal_lifting.jpg" alt="metal">
                                 </div>
@@ -296,8 +295,9 @@
                         </div>
                         <div class="listenedTrack flex justifyCenter mt04em alignCenter">
                             <span class="fs10 lGray">0:25</span>
-                            <div class="emptyMusicBar radius">
+                            <div class="emptyMusicBar relative radius">
                                 <div class="fullMusicBar radius"></div>
+                                <div class="playerCursor absolute circle"></div>
                             </div>
                             <span class="fs10 lGray">4:35</span>
                         </div>
@@ -312,8 +312,9 @@
 
                         <i class="fa-solid fa-volume-high fs12" style="color: #ffffff;"></i>
 
-                        <div class="emptyVolumeBar radius">
+                        <div class="emptyVolumeBar relative radius">
                             <div class="fullVolumeBar radius"></div>
+                            <div class="volumeCursor absolute circle"></div>
                         </div>
                     </div>
                 </div>

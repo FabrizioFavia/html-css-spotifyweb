@@ -218,7 +218,7 @@ span.homeDscrpt, span.searchDscrpt, span.libraryDscrpt, .playlistText, .addDscrp
 }
 
 
-.sideElement:hover{
+#home{
     border-left: 2px solid #adff2f;
 }
 
@@ -247,6 +247,10 @@ footer{
 
 }
 
+.fa-heart:hover, .fa-folder:hover{
+    color: white !important;
+}
+
 .footerCover img.img28{
     margin-left: 0.5em;
 }
@@ -254,6 +258,10 @@ footer{
 div.heart{
     display: flex;
     flex-direction: column;
+}
+
+.fa-heart:hover{
+    color: white;
 }
 
 div.footerAlbumName{
@@ -285,9 +293,25 @@ div.footerAlbumName{
     background-color: #c1c1c1;
 }
 
+.playerCursor{
+    width: 11px;
+    height: 11px;
+    top: -4px;
+    left: 84px;
+    background-color: white;
+    display: none; 
+}
+
 .fullMusicBar:hover{
     background-color: #adff2f;
 }
+
+.emptyMusicBar:hover .playerCursor{
+    display: block;
+    
+}
+
+
 
 .volume i{
     margin-left:  5%;
@@ -306,8 +330,21 @@ div.footerAlbumName{
     background-color: #c1c1c1;
 }
 
+.volumeCursor{
+    width: 11px;
+    height: 11px;
+    top: -3px;
+    right: 30px;
+    background-color: white;
+    display: none; 
+}
+
 .fullVolumeBar:hover{
     background-color: #adff2f;
+}
+
+.emptyVolumeBar:hover .volumeCursor{
+    display: block;
 }
 
 /****************** MEDIA QUERY *******************/
@@ -319,10 +356,6 @@ div.footerAlbumName{
         overflow-y: scroll;
     }
 
-    .scrollableSection{
-        height: 200px;
-        overflow-y: scroll;
-    }
 
 }
 
@@ -360,6 +393,11 @@ div.footerAlbumName{
         display: block;
         transition: 0.3s;
         line-height: 25px;
+    }
+
+    .scrollableSection{
+        height: 170px;
+        overflow-y: scroll;
     }
 
     .line{
