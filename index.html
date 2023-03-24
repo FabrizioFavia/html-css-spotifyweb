@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="pageContainer">
+    <div class="pageContainer col-100-xs">
         <div class="topContainer col-100-xs flex">
 
             <!-- SIDE MENU -->
@@ -53,55 +53,65 @@
                                 style="color: #c5c4c4;"></i>
                             <span class="addDscrpt fs12 lGray pL05em mt1em lh20 ">Crea Playlist</span>
                         </div>
+                        
+                        <div class="scrollableSection col-100-xs">
+                            <div class="playlist">
+                                <!-- NEW PLAYLIST -->
+                                <div class="sideElement flex alignCenter">
+                                    <span class="playlistName fs12 lGray mt1em lh20 ">Nome Playlist</span>
+                                </div>
 
-                        <!-- NEW PLAYLIST -->
-                        <div class="sideElement flex alignCenter">
-                            <span class="playlistName fs12 lGray mt1em lh20 ">Nome Playlist</span>
-                        </div>
+                                <!-- NEW PLAYLIST -->
+                                <div class="sideElement flex alignCenter">
+                                    <span class="playlistName fs12 lGray mt1em lh20 ">Nome Playlist</span>
+                                </div>
 
-                        <!-- NEW PLAYLIST -->
-                        <div class="sideElement flex alignCenter">
-                            <span class="playlistName fs12 lGray mt1em lh20 ">Nome Playlist</span>
-                        </div>
+                                <!-- NEW PLAYLIST -->
+                                <div class="sideElement flex alignCenter">
+                                    <span class="playlistName fs12 lGray mt1em lh20 ">Nome Playlist</span>
+                                </div>
 
-                        <!-- NEW PLAYLIST -->
-                        <div class="sideElement flex alignCenter">
-                            <span class="playlistName fs12 lGray mt1em lh20 ">Nome Playlist</span>
-                        </div>
+                                <!-- NEW PLAYLIST -->
+                                <div class="sideElement flex alignCenter">
+                                    <span class="playlistName  fs12 lGray mt1em lh20 ">Nome Playlist</span>
+                                </div>
 
-                        <!-- NEW PLAYLIST -->
-                        <div class="sideElement flex alignCenter">
-                            <span class="playlistName  fs12 lGray mt1em lh20 ">Nome Playlist</span>
-                        </div>
+                                <!-- NEW PLAYLIST -->
+                                <div class="sideElement flex alignCenter">
+                                    <span class="playlistName  fs12 lGray mt1em lh20 ">Nome Playlist</span>
+                                </div>
 
-                        <!-- NEW PLAYLIST -->
-                        <div class="sideElement flex alignCenter">
-                            <span class="playlistName  fs12 lGray mt1em lh20 ">Nome Playlist</span>
-                        </div>
+                                <!-- NEW PLAYLIST -->
+                                <div class="sideElement flex alignCenter">
+                                    <span class="playlistName fs12 lGray mt1em lh20 ">Nome Playlist</span>
+                                </div>
 
-                        <!-- NEW PLAYLIST -->
-                        <div class="sideElement flex alignCenter">
-                            <span class="playlistName fs12 lGray mt1em lh20 ">Nome Playlist</span>
-                        </div>
-
-                        <!-- NEW PLAYLIST -->
-                        <div class="sideElement flex alignCenter">
-                            <span class="playlistName fs12 lGray mt1em lh20 ">Nome Playlist</span>
+                                <!-- NEW PLAYLIST -->
+                                <div class="sideElement flex alignCenter">
+                                    <span class="playlistName fs12 lGray mt1em lh20 ">Nome Playlist</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                     <!-- BOTTOM SIDEBAR -->
                     <div class="bottomImg flexCol alignCenter">
 
                         <!-- DOWNLOAD -->
-                        <img class="img15 mb05em alignEnd" src="./img/download.svg" alt="download">
+                        <div class="sideElement flex">
+                            <img class="img15 mb05em alignEnd" src="./img/download.svg" alt="download">
+                            <span class="downloadDescription fs12 lGray pL05em">Installa app</span>
+                        </div>
                         <div class="line sideElement"></div>
                         <br>
 
                         <!-- PROFILE -->
-                        <div class="profileImgBox bgLightGray circle borderW mb05em">
-                            <img class="img16" src="./img/profile.svg" alt="profile">
+                        <div class="sideElement col-100-xs flex">
+                            <div class="profileImgBox bgLightGray circle borderW mb05em">
+                                <img class="img16 " src="./img/profile.svg" alt="profile">
+                            </div>
+                            <h5 class="sideElement userDscrpt pL05em white"> John Doe</h5>
                         </div>
+
                     </div>
                 </div>
             </aside>
@@ -109,13 +119,13 @@
             <!-- CENTRAL PART -->
             <div class="centralPage col-90-xs ">
                 <header>
-                        <div class="headerBtn white fs10 col-1-10-xs borderW">EFFETTUA L'UPGRADE</div>
+                    <div class="headerBtn white fs10 col-1-10-xs borderW">EFFETTUA L'UPGRADE</div>
                 </header>
 
                 <!-- MAIN -->
                 <main>
 
-                    <div class="mainContainer col-100-xs bgSpaceGray">
+                    <div class="mainContainer bgSpaceGray">
 
                         <ul class="flex wrap">
                             <li id="customNavTop" class="white fs14"><a href="#">IN EVIDENZA</a></li>
@@ -199,7 +209,7 @@
                         </div>
 
                         <!-- ROW -->
-                        <h2 id="forJohnTitle" class="col-100-xs white mb02em marginL15">Creato per John Doe</h2>
+                        <h2 id="forJohnTitle" class="white mb02em pL15">Creato per John Doe</h2>
                         <p class="lGray marginL15 fs12 mb2em">Più ascolti, più accurati saranno i suggerimenti.</p>
 
                         <div class="row col-100-xs mb2em">
@@ -226,7 +236,7 @@
                         </div>
 
                         <!-- ROW -->
-                        <h2 id="forJohnTitle" class="col-100-xs white mb02em marginL15">Artisti più popolari</h2>
+                        <h2 id="forJohnTitle" class="col-100-xs white mb02em pL15">Artisti più popolari</h2>
                         <p class="lGray marginL15 fs12 mb2em">Più ascolti, più accurati saranno i suggerimenti.</p>
 
                         <div class="row col-100-xs">
@@ -248,7 +258,7 @@
                                     </div>
                                     <img class="circle" src="./img/einaudi.jpeg" alt="Ludovico Einaudi">
                                 </div>
-                                <h5 class="white">Ludovico Einaudi</h5>
+                                <h5 class="white">Lana del Rey</h5>
                             </div>
                         </div>
                     </div>
@@ -258,19 +268,19 @@
         </div>
 
         <!-- FOOTER SECTION -->
-        <div class="bottomContainer col-100-xs bgLightC">
+        <div class="bottomContainer bgLightC">
             <footer>
                 <div class="footerBar flex spaceBtw col-100-xs bgGray">
 
                     <!-- LEFT -->
-                    <div class="footerCover flex alignCenter  pL05em">
+                    <div class="footerCover flex alignCenter  pL05em ">
                         <img class="img28" src="./img/sinister.jpeg" alt="sinister">
 
-                        <div class="footerAlbumName flexCol alignStart justifyCenter pL05em ">
+                        <div class="footerAlbumName alignStart justifyCenter mL05em-s ">
                             <span class="white fs12">Sinister</span>
                             <span class="lGray fs12">Brano nome</span>
                         </div>
-                        <div class="heart col-1-4-xs flexCol justifyCenter spaceBtw">
+                        <div class="heart col-1-4-xs justifyCenter spaceBtw">
                             <i class="fa-regular fa-heart fs14" style="color: #7d7a7a;"></i>
                             <i class="fa-regular fa-folder fs14" style="color: #7d7a7a;"></i>
                         </div>
@@ -278,18 +288,18 @@
                     <!-- CENTER -->
                     <div class="player col-1-3-xs  flexCol">
                         <div class="playerButtons justifyCenter flex alignCenter mt05em">
-                            <i class="fa-solid fa-shuffle fs16" style="color: #ffffff;"></i>
-                            <i class="fa-solid fa-backward-step fs16" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-shuffle fs12" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-backward-step fs12" style="color: #ffffff;"></i>
                             <i class="fa-regular fa-circle-play fs30" style="color: #ffffff;"></i>
-                            <i class="fa-solid fa-forward-step fs16" style="color: #ffffff;"></i>
-                            <i class="fa-solid fa-arrow-rotate-right fs16" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-forward-step fs12" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-arrow-rotate-right fs12" style="color: #ffffff;"></i>
                         </div>
                         <div class="listenedTrack flex justifyCenter mt04em alignCenter">
-                            <span class="fs10 white">0:25</span>
+                            <span class="fs10 lGray">0:25</span>
                             <div class="emptyMusicBar radius">
                                 <div class="fullMusicBar radius"></div>
                             </div>
-                            <span class="fs10 white">4:35</span>
+                            <span class="fs10 lGray">4:35</span>
                         </div>
                     </div>
 
@@ -306,7 +316,6 @@
                             <div class="fullVolumeBar radius"></div>
                         </div>
                     </div>
-
                 </div>
             </footer>
         </div>

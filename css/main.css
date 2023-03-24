@@ -1,5 +1,7 @@
 /*********** HELPER ************/
-
+:root{
+    --footer-height: 80px;
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -47,6 +49,7 @@
 .mt05em{margin-top: 0.5em;}
 .mt08em{margin-top: 0.8em;}
 .mt1em{margin-top: 1em;}
+.pL15{padding-left: 15px;}
 .pT05em{padding-top: 0.2em;}
 .paddingR10{padding-right: 10px;}
 
@@ -96,7 +99,7 @@
 /*********** HELPER END ************/
 
 .pageContainer{
-    width: 100vw;
+    width: 100%;
     height:100vh;
 }
 
@@ -123,16 +126,13 @@ header{
     transform: scale(1.1);
 }
 
-
-
-
 /*********** MAIN ************/
 .topContainer{height: calc(100vh - 60px);}
 
 .mainContainer{
     height: calc(100vh - 120px);
     display: inline-block;
-    padding: 30px 10px 0 10px;
+    padding: 20px 10px 0 10px;
     overflow-y: scroll;
 }
 
@@ -148,13 +148,17 @@ a{
     padding-bottom: 0.5em;
 }
 
+#customNavTop > a{
+    border-bottom: 1px solid #adff2f;
+}
+
 ul li:hover a{
-    border-bottom: 1px solid #adff2f ;
     color: white;
 }
 
 #recentlyPlayed{
-    margin: 2em 0 1em 0.5em;
+   
+    padding: 2em 0 1em 0.5em;
 }
 
 .wrapper h5 {
@@ -173,7 +177,7 @@ ul li:hover a{
 }
 
 .wrapper{
-    width: calc(100% / 2);
+    width: calc(100% / 2 - 0.5em);
     padding: 0.5em;
 }
 
@@ -181,7 +185,6 @@ ul li:hover a{
     object-fit: contain;
     width: 100%;
 }
-
 
 .squareCover{
     height: 100%;
@@ -210,12 +213,17 @@ ul li:hover a{
 
 .lateralMenu{padding-top: 0.5em;}
 
-span.homeDscrpt, span.searchDscrpt, span.libraryDscrpt, .playlistText, .addDscrpt, .fa-square-plus, .playlistName{
+span.homeDscrpt, span.searchDscrpt, span.libraryDscrpt, .playlistText, .addDscrpt, .fa-square-plus, .playlistName, .downloadDescription, .userDscrpt{
     display: none;
 }
 
+
 .sideElement:hover{
     border-left: 2px solid #adff2f;
+}
+
+.profileImgBox{
+    margin-left: 0.35em;
 }
 
 .line{
@@ -239,6 +247,21 @@ footer{
 
 }
 
+.footerCover img.img28{
+    margin-left: 0.5em;
+}
+
+div.heart{
+    display: flex;
+    flex-direction: column;
+}
+
+div.footerAlbumName{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5em;
+}
+
 .playerButtons{
     width: 100%;
 }
@@ -252,8 +275,8 @@ footer{
     min-width: 60%;
     height: 4px;
     background-color:#808080;
-    margin-left:  25px;
-    margin-right: 25px;
+    margin-left:  5px;
+    margin-right: 5px;
 }
 
 .fullMusicBar{
@@ -288,20 +311,29 @@ footer{
 }
 
 /****************** MEDIA QUERY *******************/
+
 /* SHORT SCREEN*/
-@media screen and (max-height:552px) {
+@media screen and (max-height:565px) {
  
     .topContainer > .lateralMenu{
         overflow-y: scroll;
     }
-}
 
+    .scrollableSection{
+        height: 200px;
+        overflow-y: scroll;
+    }
+
+}
 
 /* SMALL */
 @media screen  and (min-width:480px) {
 
     .mb15em-s{margin-bottom: 1.5em;}
-    .pL05em{padding-left: 1.5em;}
+    .pL05em{padding-left: 0.5em;}
+    .pL1em-s{padding-left: 1em;}
+    .mL05em-s{margin-left: 0.5em;}
+
     .dsplBlock{display: block;}
     
     /* SIDE MENU */
@@ -324,6 +356,12 @@ footer{
         transition: 0.3s;
     }
 
+    div.sideElement h5{
+        display: block;
+        transition: 0.3s;
+        line-height: 25px;
+    }
+
     .line{
         display: block;
         width: 90%;
@@ -331,6 +369,10 @@ footer{
 
     div.sideElement{
         padding-left: 15px;
+    }
+
+    .profileImgBox{
+        margin-left: 0;
     }
 
     /* MAIN */
@@ -353,11 +395,31 @@ footer{
         justify-content: space-evenly;
     }
 
-    .footerCover img.img28{
-        width: 40px;
-    }
-}
+    /* FOOTER */
 
+    .emptyMusicBar{
+        margin-left:  15px;
+        margin-right: 15px;
+    }
+
+    .fa-backward-step{
+        font-size: 16px;
+    }
+
+    .fa-forward-step{
+        font-size: 16px;
+    }
+
+    .fa-arrow-rotate-right {
+        font-size: 16px;
+    }
+
+    .fa-shuffle{
+        font-size: 16px;
+    }
+    
+
+}
 
 /* MEDIUM */
 @media screen  and (min-width:769px) {
@@ -376,6 +438,24 @@ footer{
     ul{
         justify-content: space-evenly;
     }
+
+    div.heart{
+        display: flex;
+        flex-direction: row;
+    }
+
+    div.heart i{
+        margin-left: 15px;
+    }
+
+    .footerCover img.img28{
+        width: 40px;
+    }
+
+    .footerAlbumName{
+        margin-right: 5px;
+    }
+
 }
 
 /* LARGE */
