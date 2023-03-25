@@ -202,7 +202,10 @@ ul li:hover a{
     display: none;
 }
 
-.lateralMenu{padding-top: 0.5em;}
+.lateralMenu{
+    padding-top: 0.5em;
+    overflow-y: scroll;
+}
 
 span.homeDscrpt, span.searchDscrpt, span.libraryDscrpt, .playlistText, .addDscrpt, .fa-square-plus, .playlistName, .downloadDescription, .userDscrpt{
     display: none;
@@ -287,10 +290,9 @@ div.footerAlbumName{
 .playerCursor{
     width: 11px;
     height: 11px;
-    top: -4px;
-    left: 20px;
     background-color: white;
     display: none; 
+    align-self: center;
 }
 
 .fullMusicBar:hover{
@@ -324,10 +326,9 @@ div.footerAlbumName{
 .volumeCursor{
     width: 11px;
     height: 11px;
-    top: -3px;
-    right: 30px;
     background-color: white;
     display: none; 
+    align-self: center;
 }
 
 .fullVolumeBar:hover{
@@ -340,15 +341,7 @@ div.footerAlbumName{
 
 /****************** MEDIA QUERY *******************/
 
-/* SHORT SCREEN*/
-@media screen and (max-height:565px) {
- 
-    .topContainer > .lateralMenu{
-        overflow-y: scroll;
-    }
 
-
-}
 
 /* SMALL */
 @media screen  and (min-width:480px) {
@@ -387,7 +380,7 @@ div.footerAlbumName{
     }
 
     .scrollableSection{
-        height: 400px;
+        height: 340px;
         overflow-y: scroll;
     }
 
@@ -447,14 +440,7 @@ div.footerAlbumName{
         font-size: 16px;
     }
 
-    .playerCursor{
-        width: 11px;
-        height: 11px;
-        top: -4px;
-        left: 30px;
-        background-color: white;
-        display: none; 
-    }
+   
     
 
 }
@@ -494,14 +480,7 @@ div.footerAlbumName{
         margin-right: 5px;
     }
 
-    .playerCursor{
-        width: 11px;
-        height: 11px;
-        top: -4px;
-        left: 40px;
-        background-color: white;
-        display: none; 
-    }
+    
 
 }
 
@@ -527,14 +506,7 @@ div.footerAlbumName{
         margin-left: 100px;
     }
 
-    .playerCursor{
-        width: 11px;
-        height: 11px;
-        top: -4px;
-        left: 84px;
-        background-color: white;
-        display: none; 
-    }
+    
 }
 
 /* EXTRA-LARGE */
@@ -545,12 +517,5 @@ div.footerAlbumName{
         padding: 0.5em;
     }
 
-    .playerCursor{
-        width: 11px;
-        height: 11px;
-        top: -4px;
-        left: 84px;
-        background-color: white;
-        display: none; 
-    }
+
 }
