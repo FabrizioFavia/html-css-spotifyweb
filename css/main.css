@@ -443,10 +443,6 @@ div.footerAlbumName{
     .fa-shuffle{
         font-size: 16px;
     }
-
-   
-    
-
 }
 
 /* MEDIUM */
@@ -484,10 +480,6 @@ div.footerAlbumName{
         margin-right: 5px;
     }
 
-    .scrollableSection{
-        height: 600px;
-        overflow-y: scroll;
-    }
 
     
 
@@ -515,12 +507,6 @@ div.footerAlbumName{
         margin-left: 100px;
     }
 
-    .scrollableSection{
-        height: 600px;
-        overflow-y: scroll;
-    }
-
-    
 }
 
 /* EXTRA-LARGE */
@@ -530,6 +516,4 @@ div.footerAlbumName{
         width: calc(100% / 6);
         padding: 0.5em;
     }
-
-
 }
