@@ -384,7 +384,7 @@ div.footerAlbumName{
     }
 
     .scrollableSection{
-        height: 340px;
+        height: 600px;
         overflow-y: scroll;
     }
 
