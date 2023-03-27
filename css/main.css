@@ -292,6 +292,9 @@ div.footerAlbumName{
 }
 
 .playerCursor{
+    right: 0;
+    bottom: 50%;
+    transform: translate(-0, 50%);
     width: 11px;
     height: 11px;
     background-color: white;
@@ -328,6 +331,9 @@ div.footerAlbumName{
 }
 
 .volumeCursor{
+    right: 0;
+    bottom: 50%;
+    transform: translate(-0, 50%);
     width: 11px;
     height: 11px;
     background-color: white;
