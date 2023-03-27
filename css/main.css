@@ -384,7 +384,7 @@ div.footerAlbumName{
     }
 
     .scrollableSection{
-        height: 600px;
+        height: 172px;
         overflow-y: scroll;
     }
 
@@ -508,6 +508,11 @@ div.footerAlbumName{
 
     #customNavTop{
         margin-left: 100px;
+    }
+
+    .scrollableSection{
+        height: 600px;
+        overflow-y: scroll;
     }
 
     
